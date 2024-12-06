@@ -144,6 +144,11 @@
 		The rest of elements are informative and can be removed, though it's recommended to keep them for a better user experience.
 	-->
 	<div id="rom-patcher-container">
+
+	<!-- begin 2-column layout, patch UI on left, preview images on right  -->
+<!-- 
+		<div style="display: flex;">
+-->
 		<div class="rom-patcher-row margin-bottom" id="rom-patcher-row-file-rom">
 			<div class="text-right">
 				<label for="rom-patcher-input-file-rom" data-localize="yes">
@@ -185,6 +190,26 @@
 				<select id="rom-patcher-select-patch"></select>
 			</div>
 		</div>
+			<!-- end left column 
+			</div>
+			-->
+
+			<!-- split point for 2-column layout; begin right column
+			<div>
+			-->
+				<!-- preview image appears here
+				<div class="dislay: flex; justify-content: center; align-items: middle;">
+					<img src={ some image prop } />
+				</div> 
+				-->
+			<!-- end right column 
+			</div>
+			-->
+
+
+		<!-- end 2-columns 
+		</div> 
+		-->
 		<div class="rom-patcher-row margin-bottom" id="rom-patcher-row-patch-description">
 			<div class="text-right text-mono text-muted" data-localize="yes">
 				Description:
@@ -196,6 +221,12 @@
 			</div>
 			<button id="rom-patcher-button-apply" data-localize="yes" disabled>Apply patch</button>
 		</div>
+	
+	</div>
+
+	<!-- first-round preview image -->
+	<div>
+		<img src="battle-sprite-styles.png" style="width:100vw;" />
 	</div>
 
 	<div style="text-align: center;">
@@ -211,7 +242,8 @@
 			<img src="./rom-patcher-js/assets/powered_by_rom_patcher_js.png" loading="lazy" />
 			Powered by Rom Patcher JS
 		</a>
-<!-- 
+<!-- disabled counter
+
 		<div id="sfcscsy5nlmzawjf6xg52gc5srqtfgt2phm">
 			<script type="text/javascript" src="https://counter6.optistats.ovh/private/counter.js?c=sfcscsy5nlmzawjf6xg52gc5srqtfgt2phm&down=async" async></script>
 			<noscript>
@@ -220,7 +252,7 @@
 				</a>
 			</noscript>
 		</div>
-		 -->
+-->
 	</div>
 </body>
 
