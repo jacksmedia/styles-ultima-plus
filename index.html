@@ -145,9 +145,10 @@
 	-->
 	<div id="rom-patcher-container">
 
-	<!-- begin 2-column layout, patch UI on left, preview images on right  -->
-<!-- 
+	<!-- begin 2-column layout, patch UI on left, preview images on right
+
 		<div style="display: flex;">
+			<div style="width: 45vw; justify-content: center; align-items: middle;">
 -->
 		<div class="rom-patcher-row margin-bottom" id="rom-patcher-row-file-rom">
 			<div class="text-right">
@@ -171,12 +172,6 @@
 						<code id="rom-patcher-span-crc32" style="text-transform: capitalize"></code>
 					</h2>
 				</div>
-			</div>
-			<div class="rom-patcher-row" id="rom-patcher-row-info-rom">
-				<div class="text-right">
-					ROM:
-				</div>
-				<div class="text-truncate"><span id="rom-patcher-span-rom-info"></span></div>
 			</div>
 		</div>
 
@@ -225,8 +220,8 @@
 	</div>
 
 	<!-- first-round preview image -->
-	<div>
-		<img src="battle-sprite-styles.png" style="width:100vw;" />
+	<div class="display: flex; justify-content: center;">
+		<img src="battle-sprite-styles.png" style="width:95vw;" />
 	</div>
 
 	<div style="text-align: center;">
