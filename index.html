@@ -251,13 +251,14 @@
 
 	<!-- being patcher container -->
 
-	<div id="rom-patcher-container" style="min-width: 85vw;">
+	<div id="rom-patcher-container" style="min-width: 90vw;">
 
-	<!-- begin 2-column layout: patch UI on left, preview images on right -->
+	<!-- begin 2-column layout -->
+	 
 		<div style="display: flex;">
 
-		<!-- left column -->
-			<div style="width: 45vw; justify-content: center; align-items: middle;">
+		<!-- left column: 1/2 patch UI & title screen -->
+			<div style="width: 45vw; justify-content: center; align-items: middle; width: 45vw; max-width: 45vw;">
 
 				<div class="rom-patcher-row margin-bottom" id="rom-patcher-row-file-rom">
 					<div class="text-right">
@@ -283,7 +284,19 @@
 						</div>
 					</div>
 				</div>
+				
+				<div>
+					<img style="width: 100%; max-width: 60vw;" src="Title.png" id="preview-Title" />
+				</div>
 
+			<!-- end left column -->
+			</div>
+			
+			<!-- split point for 2-column layout -->
+
+			<!-- right column: 1/2 patch UI & preview images -->
+			<div class="display: flex; justify-content: center; align-items: middle; width: 45vw; max-width: 45vw;">
+				
 				<div class="rom-patcher-row margin-bottom" id="rom-patcher-row-file-patch">
 					<div class="text-right">
 						<label for="rom-patcher-input-file-patch" data-localize="yes">
@@ -294,14 +307,15 @@
 						<select id="rom-patcher-select-patch"></select>
 					</div>
 				</div>
-			<!-- end left column -->
-			</div>
-			
+	
+				<div class="rom-patcher-row margin-bottom" id="rom-patcher-row-patch-description">
+					<div class="text-right" data-localize="yes">
+						Changes:
+					</div>
+					<div class="" id="rom-patcher-patch-description"></div>
+				</div>
 
-			<!-- split point for 2-column layout; begin right column -->
-			<div class="display: flex; justify-content: center; align-items: middle;">
-				<!-- preview images appear here -->
-				
+				<!-- preview images -->
 				<img style="width: 100%; max-width: 60vw;" src="p-Luna.png" id="preview-Luna" />
 				<img style="width: 100%; max-width: 60vw;" src="p-Mercury.png" id="preview-Mercury" />
 				<img style="width: 100%; max-width: 60vw;" src="p-Venus.png" id="preview-Venus" />
@@ -319,12 +333,6 @@
 		<!-- end 2-columns -->
 		</div> 
 
-		<div class="rom-patcher-row margin-bottom" id="rom-patcher-row-patch-description">
-			<div class="text-right" data-localize="yes">
-				Changes:
-			</div>
-			<div class="" id="rom-patcher-patch-description"></div>
-		</div>
 		<div class="text-center" id="rom-patcher-row-apply">
 			<div id="rom-patcher-row-error-message" class="margin-bottom"><span id="rom-patcher-error-message"></span>
 			</div>
