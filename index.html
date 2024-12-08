@@ -2,7 +2,7 @@
 <html translate="no" style="background: #	000; margin: 0; padding: 0;">
 
 <head>
-	<title>Final Fantasy 4 Ultima Plus Patcher</title>
+	<title>FF4 Ultima Plus Style Packs</title>
 	<meta http-equiv="content-Type" content="text/html; charset=UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 
@@ -18,7 +18,8 @@
 		const FF2_CHECKSUMS_INVALID = [0x21027C5D,0xCAA15E97] // Japanese roms, no patches for them at this time
 
 			try {
-				RomPatcherWeb.initialize({
+				RomPatcherWeb.initialize(
+					{
 					language: 'en', //default: en
 					requireValidation: true, // needed for multipatch mode
 					onloadrom: function (romFile) {						
@@ -41,6 +42,119 @@
 						/* if ROM is a known (J) version that is incompatible with these patches */
 						if (!isRomValid && FF2_CHECKSUMS_INVALID.indexOf(crc32) !== -1)
 							RomPatcherWeb.setErrorMessage('Please provide a v1.0 or v1.1 English language FF2 rom file.');
+					},
+					onloadpatch: function (patchFile, embededPatchInformation) { // would be nice to refactor this into select loop
+						if (patchFile.getName() === '1-Luna') {
+							document.getElementById('preview-Luna').style.display = 'block';
+							document.getElementById('preview-Mercury').style.display = 'none';
+							document.getElementById('preview-Venus').style.display = 'none';
+							document.getElementById('preview-Mars').style.display = 'none';
+							document.getElementById('preview-Ceres').style.display = 'none';
+							document.getElementById('preview-Jupiter').style.display = 'none';
+							document.getElementById('preview-Saturn').style.display = 'none';
+							document.getElementById('preview-Uranus').style.display = 'none';
+							document.getElementById('preview-Neptune').style.display = 'none';
+							document.getElementById('preview-Pluto').style.display = 'none';
+						}else if(patchFile.getName() === '2-Mercury'){
+							document.getElementById('preview-Luna').style.display = 'none';
+							document.getElementById('preview-Mercury').style.display = 'block';
+							document.getElementById('preview-Venus').style.display = 'none';
+							document.getElementById('preview-Mars').style.display = 'none';
+							document.getElementById('preview-Ceres').style.display = 'none';
+							document.getElementById('preview-Jupiter').style.display = 'none';
+							document.getElementById('preview-Saturn').style.display = 'none';
+							document.getElementById('preview-Uranus').style.display = 'none';
+							document.getElementById('preview-Neptune').style.display = 'none';
+							document.getElementById('preview-Pluto').style.display = 'none';
+						}else if(patchFile.getName() === '3-Venus'){
+							document.getElementById('preview-Luna').style.display = 'none';
+							document.getElementById('preview-Mercury').style.display = 'none';
+							document.getElementById('preview-Venus').style.display = 'block';
+							document.getElementById('preview-Mars').style.display = 'none';
+							document.getElementById('preview-Ceres').style.display = 'none';
+							document.getElementById('preview-Jupiter').style.display = 'none';
+							document.getElementById('preview-Saturn').style.display = 'none';
+							document.getElementById('preview-Uranus').style.display = 'none';
+							document.getElementById('preview-Neptune').style.display = 'none';
+							document.getElementById('preview-Pluto').style.display = 'none';
+						}else if(patchFile.getName() === '4-Mars'){
+							document.getElementById('preview-Luna').style.display = 'none';
+							document.getElementById('preview-Mercury').style.display = 'none';
+							document.getElementById('preview-Venus').style.display = 'none';
+							document.getElementById('preview-Mars').style.display = 'block';
+							document.getElementById('preview-Ceres').style.display = 'none';
+							document.getElementById('preview-Jupiter').style.display = 'none';
+							document.getElementById('preview-Saturn').style.display = 'none';
+							document.getElementById('preview-Uranus').style.display = 'none';
+							document.getElementById('preview-Neptune').style.display = 'none';
+							document.getElementById('preview-Pluto').style.display = 'none';
+						}else if(patchFile.getName() === '5-Ceres'){
+							document.getElementById('preview-Luna').style.display = 'none';
+							document.getElementById('preview-Mercury').style.display = 'none';
+							document.getElementById('preview-Venus').style.display = 'none';
+							document.getElementById('preview-Mars').style.display = 'none';
+							document.getElementById('preview-Ceres').style.display = 'block';
+							document.getElementById('preview-Jupiter').style.display = 'none';
+							document.getElementById('preview-Saturn').style.display = 'none';
+							document.getElementById('preview-Uranus').style.display = 'none';
+							document.getElementById('preview-Neptune').style.display = 'none';
+							document.getElementById('preview-Pluto').style.display = 'none';
+						}else if(patchFile.getName() === '6-Jupiter'){
+							document.getElementById('preview-Luna').style.display = 'none';
+							document.getElementById('preview-Mercury').style.display = 'none';
+							document.getElementById('preview-Venus').style.display = 'none';
+							document.getElementById('preview-Mars').style.display = 'none';
+							document.getElementById('preview-Ceres').style.display = 'none';
+							document.getElementById('preview-Jupiter').style.display = 'block';
+							document.getElementById('preview-Saturn').style.display = 'none';
+							document.getElementById('preview-Uranus').style.display = 'none';
+							document.getElementById('preview-Neptune').style.display = 'none';
+							document.getElementById('preview-Pluto').style.display = 'none';
+						}else if(patchFile.getName() === '7-Saturn'){
+							document.getElementById('preview-Luna').style.display = 'none';
+							document.getElementById('preview-Mercury').style.display = 'none';
+							document.getElementById('preview-Venus').style.display = 'none';
+							document.getElementById('preview-Mars').style.display = 'none';
+							document.getElementById('preview-Ceres').style.display = 'none';
+							document.getElementById('preview-Jupiter').style.display = 'none';
+							document.getElementById('preview-Saturn').style.display = 'block';
+							document.getElementById('preview-Uranus').style.display = 'none';
+							document.getElementById('preview-Neptune').style.display = 'none';
+							document.getElementById('preview-Pluto').style.display = 'none';
+						}else if(patchFile.getName() === '8-Uranus'){
+							document.getElementById('preview-Luna').style.display = 'none';
+							document.getElementById('preview-Mercury').style.display = 'none';
+							document.getElementById('preview-Venus').style.display = 'none';
+							document.getElementById('preview-Mars').style.display = 'none';
+							document.getElementById('preview-Ceres').style.display = 'none';
+							document.getElementById('preview-Jupiter').style.display = 'none';
+							document.getElementById('preview-Saturn').style.display = 'none';
+							document.getElementById('preview-Uranus').style.display = 'block';
+							document.getElementById('preview-Neptune').style.display = 'none';
+							document.getElementById('preview-Pluto').style.display = 'none';
+						}else if(patchFile.getName() === '9-Neptune'){
+							document.getElementById('preview-Luna').style.display = 'none';
+							document.getElementById('preview-Mercury').style.display = 'none';
+							document.getElementById('preview-Venus').style.display = 'none';
+							document.getElementById('preview-Mars').style.display = 'none';
+							document.getElementById('preview-Ceres').style.display = 'none';
+							document.getElementById('preview-Jupiter').style.display = 'none';
+							document.getElementById('preview-Saturn').style.display = 'none';
+							document.getElementById('preview-Uranus').style.display = 'none';
+							document.getElementById('preview-Neptune').style.display = 'block';
+							document.getElementById('preview-Pluto').style.display = 'none';
+						}else if(patchFile.getName() === 'X-Pluto'){
+							document.getElementById('preview-Luna').style.display = 'none';
+							document.getElementById('preview-Mercury').style.display = 'none';
+							document.getElementById('preview-Venus').style.display = 'none';
+							document.getElementById('preview-Mars').style.display = 'none';
+							document.getElementById('preview-Ceres').style.display = 'none';
+							document.getElementById('preview-Jupiter').style.display = 'none';
+							document.getElementById('preview-Saturn').style.display = 'none';
+							document.getElementById('preview-Uranus').style.display = 'none';
+							document.getElementById('preview-Neptune').style.display = 'none';
+							document.getElementById('preview-Pluto').style.display = 'block';
+						}
 					}
 				}, {
 					file: 'FF4UP-Styles.zip',
@@ -123,7 +237,7 @@
 
 <body style="font: 15px 'Open Sans', sans-serif;">
 	<header style="text-align: center;">
-		<h1>Ultima Plus Rom Patcher</h1>
+		<h1>FF4 Ultima Plus Style Patcher</h1>
 		<p>
 			Please upload a copy of 'Final Fantasy 4 Ultima Plus.<br />
 			This app provides alternate graphics and font styles:<br />
@@ -135,82 +249,91 @@
 	</header>
 
 
-	<!-- Rom Patcher JS container -->
-	<!--
-		The following elements are required for Rom Patcher JS to work:
-			#rom-patcher-input-file-rom
-			#rom-patcher-select-patch
-			#rom-patcher-button-apply
-		The rest of elements are informative and can be removed, though it's recommended to keep them for a better user experience.
-	-->
-	<div id="rom-patcher-container">
+	<!-- begin patcher container -->
 
-	<!-- begin 2-column layout, patch UI on left, preview images on right
+	<div id="rom-patcher-container" style="min-width: 90vw;">
 
+	<!-- begin 2-column layout -->
+	 
 		<div style="display: flex;">
-			<div style="width: 45vw; justify-content: center; align-items: middle;">
--->
-		<div class="rom-patcher-row margin-bottom" id="rom-patcher-row-file-rom">
-			<div class="text-right">
-				<label for="rom-patcher-input-file-rom" data-localize="yes">
-					ROM file:
-				</label>
-			</div>
-			<div class="rom-patcher-container-input">
-				<input type="file" id="rom-patcher-input-file-rom" class="empty" disabled />
-			</div>
-		</div>
-		<div class="margin-bottom text-selectable text-mono text-muted" id="rom-patcher-rom-info">
-			<div class="rom-patcher-row">
-				<div class="text-right">
-					<h3 class="">
-						CRC32:
-					</h3>
+
+		<!-- left column: 1/2 patch UI & title screen -->
+			<div style="width: 45vw; justify-content: center; align-items: bottom; width: 45vw; max-width: 45vw;">
+
+				<div class="rom-patcher-row margin-bottom" id="rom-patcher-row-file-rom">
+					<div class="text-right">
+						<label for="rom-patcher-input-file-rom" data-localize="yes">
+							ROM file:
+						</label>
+					</div>
+					<div class="rom-patcher-container-input">
+						<input type="file" id="rom-patcher-input-file-rom" class="empty" disabled />
+					</div>
 				</div>
-				<div class="text-truncate">
-					<h2 class="">	
-						<code id="rom-patcher-span-crc32" style="text-transform: capitalize"></code>
-					</h2>
+				<div class="margin-bottom text-selectable text-mono text-muted" id="rom-patcher-rom-info">
+					<div class="rom-patcher-row">
+						<div class="text-right">
+							<h3 class="">
+								CRC32:
+							</h3>
+						</div>
+						<div class="text-truncate">
+							<h2 class="">	
+								<code id="rom-patcher-span-crc32" style="text-transform: capitalize"></code>
+							</h2>
+						</div>
+					</div>
 				</div>
-			</div>
-		</div>
+				
+				<div>
+					<img style="width: 100%; max-width: 45vw;" src="Title.png" id="preview-Title" />
+				</div>
 
-		<div class="rom-patcher-row margin-bottom" id="rom-patcher-row-file-patch">
-			<div class="text-right">
-				<label for="rom-patcher-input-file-patch" data-localize="yes">
-					Patch file:
-				</label>
+			<!-- end left column -->
 			</div>
-			<div class="rom-patcher-container-input">
-				<select id="rom-patcher-select-patch"></select>
-			</div>
-		</div>
-			<!-- end left column 
-			</div>
-			-->
+			
+			<!-- split point for 2-column layout -->
 
-			<!-- split point for 2-column layout; begin right column
-			<div>
-			-->
-				<!-- preview image appears here
-				<div class="dislay: flex; justify-content: center; align-items: middle;">
-					<img src={ some image prop } />
-				</div> 
-				-->
-			<!-- end right column 
+			<!-- right column: 1/2 patch UI & preview images -->
+			<div class="display: flex; justify-content: center; align-items: bottom; width: 45vw; max-width: 45vw;">
+				
+				<div class="rom-patcher-row margin-bottom" id="rom-patcher-row-file-patch">
+					<div class="text-right">
+						<label for="rom-patcher-input-file-patch" data-localize="yes">
+							Patch file:
+						</label>
+					</div>
+					<div class="rom-patcher-container-input">
+						<select id="rom-patcher-select-patch"></select>
+					</div>
+				</div>
+	
+				<div class="rom-patcher-row margin-bottom" id="rom-patcher-row-patch-description">
+					<div class="text-right" data-localize="yes">
+						Changes:
+					</div>
+					<div style="padding-left: 10px; width: 35vw; max-width: 35vw;" id="rom-patcher-patch-description"></div>
+				</div>
+
+				<div style="display: flex; justify-content: center; align-items: middle; padding-left: 10px;">
+					<!-- preview images -->
+					<img style="width: 45vw; max-width: 45vw;" src="p-Luna.gif" id="preview-Luna" />
+					<img style="width: 45vw; max-width: 45vw;" src="p-Mercury.gif" id="preview-Mercury" />
+					<img style="width: 45vw; max-width: 45vw;" src="p-Venus.gif" id="preview-Venus" />
+					<img style="width: 45vw; max-width: 45vw;" src="p-Mars.gif" id="preview-Mars" />
+					<img style="width: 45vw; max-width: 45vw;" src="p-Ceres.gif" id="preview-Ceres" />
+					<img style="width: 45vw; max-width: 45vw;" src="p-Jupiter.gif" id="preview-Jupiter" />
+					<img style="width: 45vw; max-width: 45vw;" src="p-Saturn.gif" id="preview-Saturn" />
+					<img style="width: 45vw; max-width: 45vw;" src="p-Uranus.gif" id="preview-Uranus" />
+					<img style="width: 45vw; max-width: 45vw;" src="p-Neptune.gif" id="preview-Neptune" />
+					<img style="width: 45vw; max-width: 45vw;" src="p-Pluto.gif" id="preview-Pluto" />
+				</div>
+			<!-- end right column -->
 			</div>
-			-->
 
-
-		<!-- end 2-columns 
+		<!-- end 2-columns -->
 		</div> 
-		-->
-		<div class="rom-patcher-row margin-bottom" id="rom-patcher-row-patch-description">
-			<div class="text-right text-mono text-muted" data-localize="yes">
-				Description:
-			</div>
-			<div class="" id="rom-patcher-patch-description"></div>
-		</div>
+
 		<div class="text-center" id="rom-patcher-row-apply">
 			<div id="rom-patcher-row-error-message" class="margin-bottom"><span id="rom-patcher-error-message"></span>
 			</div>
@@ -220,7 +343,7 @@
 	</div>
 
 	<!-- first-round preview image -->
-	<div class="display: flex; justify-content: center;">
+	<div style="display: flex; justify-content: center;" >
 		<img src="battle-sprite-styles.png" style="width:95vw;" />
 	</div>
 
