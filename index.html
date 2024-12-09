@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html translate="no" style="background: #	000; margin: 0; padding: 0;">
+<html translate="no" style="margin: 0; padding: 0;">
 
 <head>
 	<title>FF4 Ultima Plus Style Packs</title>
@@ -13,8 +13,7 @@
 	<!-- Rom Patcher JS initialization for main feature -->
 	<script type="text/javascript">
 		window.addEventListener('load', function (evt) {
-		const FF4ULTIMAPLUS_CHECKSUM = 0x4a43e2b7 ; // FF II (v1.0).ips
-		// both inside of RC08.zip
+		const FF4ULTIMAPLUS_CHECKSUM = 0x4a43e2b7 ; // FF4 Ultima Plus current version
 		const FF2_CHECKSUMS_INVALID = [0x21027C5D,0xCAA15E97] // Japanese roms, no patches for them at this time
 
 			try {
@@ -235,17 +234,33 @@
 
 </head>
 
-<body style="font: 15px 'Open Sans', sans-serif;">
-	<header style="text-align: center;">
-		<h1>FF4 Ultima Plus Style Patcher</h1>
-		<p>
-			Please upload a copy of 'Final Fantasy 4 Ultima Plus.<br />
-			This app provides alternate graphics and font styles:<br />
-			<span style="color:gold;">Choose from one of 10 after uploading</span>.<br />
-			This tool & patches current as of 6 Dec 2024
-		</p>
-		<h5>(Verify rom has no header: feature to remove header coming soon)</h5>
-		<h3>The CRC32 (checksum) expcted is <code style="color:gold;">4a43e2b7</code></h3>
+<body style="font: 15px 'Open Sans', sans-serif; text-align: center;">
+	<h1>FF4 Ultima Plus Style Patcher</h1>
+	<header style="display: flex; text-align: center; justify-content: center;">
+		
+		<div style="text-align: center; margin-right: 5vw;">
+			<p>
+				Please upload a copy of 'Final Fantasy 4 Ultima Plus.<br />
+				This app provides alternate graphics and font styles:<br />
+				<span style="color:gold;">Choose from one of 10 after uploading</span>.<br />
+				This tool & patches current as of 6 Dec 2024
+			</p>
+			<h5>(Verify rom has no header: feature to remove header coming soon)</h5>
+			<h3>The CRC32 (checksum) expcted is <code style="color:gold;">4a43e2b7</code></h3>
+
+			<!-- end left column -->
+		</div>
+		<!-- split point for 2-column layout -->
+
+		<!-- right column: 1/2 patch UI & preview images -->
+		<div style="text-align: center; margin-left: 5vw;">
+			<h3 style="color:gold;">
+				If you need a copy of FF4 UP,<br/>
+				use our rom patcher at<br/>
+				<h2><a style="color:aqua;" href="https://ultima-plus-patchapp.vercel.app">FFF4 Ultima Plus Patcher</a>.</h2>
+			</h3>
+		</div>
+
 	</header>
 
 
@@ -347,30 +362,11 @@
 		<img src="battle-sprite-styles.png" style="width:95vw;" />
 	</div>
 
-	<div style="text-align: center;">
-		<h3>
-			If you need a copy of FF4 UP,<br/>
-			use our rom patcher at<br/>
-			<h2><a href="https://ultima-plus-patchapp.vercel.app">FFF4 Ultima Plus Patcher</a>.</h2>
-		</h3>
-	</div>
-
 	<div id="rom-patcher-powered" class="text-center">
 		<a href="https://github.com/marcrobledo/RomPatcher.js" target="_blank">
 			<img src="./rom-patcher-js/assets/powered_by_rom_patcher_js.png" loading="lazy" />
 			Powered by Rom Patcher JS
 		</a>
-<!-- disabled counter
-
-		<div id="sfcscsy5nlmzawjf6xg52gc5srqtfgt2phm">
-			<script type="text/javascript" src="https://counter6.optistats.ovh/private/counter.js?c=sfcscsy5nlmzawjf6xg52gc5srqtfgt2phm&down=async" async></script>
-			<noscript>
-				<a href="https://www.freecounterstat.com" title="website counter code">
-					<img src="https://counter6.optistats.ovh/private/freecounterstat.php?c=sfcscsy5nlmzawjf6xg52gc5srqtfgt2phm" border="0" title="website counter code" alt="website counter code">
-				</a>
-			</noscript>
-		</div>
--->
 	</div>
 </body>
 
