@@ -623,6 +623,11 @@ body.theme-pastel .spinner:before{background-color:#ff941e}
 */
 
 
+.clean-list {
+	list-style-type: none;
+}
+
+
 /* responsive */
 @media only screen and (max-width:641px){
 	#wrapper{font-size:14px}
